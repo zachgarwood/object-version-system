@@ -1,0 +1,5 @@
+<ul>
+    {{#each model as |jsonObject|}}
+    <li>{{#link-to 'list.detail' jsonObject.id}}{{jsonObject.name}}{{/link-to}}</li>
+    {{/each}}
+</ul>

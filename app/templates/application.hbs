@@ -1,1 +1,19 @@
-{{outlet}}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2">
+            <h2>Documents</h2>
+        </div>
+        <div class="col-lg-10">
+            <h2>Detail</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2">
+            {{outlet 'list'}}
+        </div>
+        <div class="col-lg-10">
+            {{outlet 'detail'}}
+        </div>
+    </div>
+</div>
