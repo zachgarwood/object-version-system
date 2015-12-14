@@ -1,0 +1,16 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model.attributes as |attribute|}}
+        <tr>
+            <td>{{attribute.key}}</td>
+            <td>{{attribute.value}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

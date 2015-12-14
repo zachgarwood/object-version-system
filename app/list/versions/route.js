@@ -2,10 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.store.find('document', params.id);
+    return this.store.find('version', params.id);
   },
   renderTemplate() {
-    this.render('list.detail',
+    this.render('list.versions',
     {
       into: 'application',
       outlet: 'detail',

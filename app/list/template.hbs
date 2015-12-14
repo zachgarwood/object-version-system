@@ -1,5 +1,14 @@
 <ul>
-    {{#each model as |jsonObject|}}
-    <li>{{#link-to 'list.detail' jsonObject.id}}{{jsonObject.name}}{{/link-to}}</li>
+    {{#each model as |document|}}
+    <li>
+        {{document.name}}
+        <ul>
+            {{#each document.versions as |version|}}
+            <li>
+                {{#link-to 'list.versions' version.id}}{{version.timestamp}}{{/link-to}}
+            </li>
+            {{/each}}
+        </ul>
+    </li>
     {{/each}}
 </ul>
