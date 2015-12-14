@@ -1,33 +1,7 @@
 export default function() {
-  this.get('/documents', function() {
-    return {
-      'documents': [
-        {id: 1, name: 'One', versions: [1, 2]},
-        {id: 2, name: 'Two', versions: [3]},
-        {id: 3, name: 'Three', versions: [4]},
-      ]
-    };
-  });
-  this.get('/versions', function() {
-    return {
-      'versions': [
-        {id: 1, timestamp: '2015-12-01', content: 'abc'},
-        {id: 2, timestamp: '2015-12-02', content: 'def'},
-        {id: 3, timestamp: '2015-12-01', content: 'ghi'},
-        {id: 4, timestamp: '2015-12-01', content: 'jkl'},
-      ]
-    };
-  });
-  this.get('/contents', function() {
-    return {
-      'contents': [ 
-        {id: 'abc', key: 'value'},
-        {id: 'def', key: 'new value'},
-        {id: 'ghi', huh: 'what'},
-        {id: 'jkl', nope: 'yup'},
-      ]
-    };
-  });
+  this.get('/documents');
+  this.get('/versions/:id');
+  this.get('/contents/:id');
   /*
     Config (with defaults).
 
