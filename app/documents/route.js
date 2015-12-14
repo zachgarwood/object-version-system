@@ -5,10 +5,10 @@ export default Ember.Route.extend({
     return this.store.findAll('document');
   },
   renderTemplate() {
-    this.render('list',
+    this.render('documents',
     {
       into: 'application',
-      outlet: 'list',
+      outlet: 'documents',
     });
   } 
 });

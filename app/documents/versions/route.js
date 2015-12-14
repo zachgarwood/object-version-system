@@ -5,10 +5,10 @@ export default Ember.Route.extend({
     return this.store.find('version', params.id);
   },
   renderTemplate() {
-    this.render('list.versions',
+    this.render('documents.versions',
     {
       into: 'application',
-      outlet: 'detail',
+      outlet: 'versions',
     });
   }
 });

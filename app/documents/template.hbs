@@ -5,7 +5,7 @@
         <ul>
             {{#each document.versions as |version|}}
             <li>
-                {{#link-to 'list.versions' version.id}}{{version.timestamp}}{{/link-to}}
+                {{#link-to 'documents.versions' version.id}}{{version.timestamp}}{{/link-to}}
             </li>
             {{/each}}
         </ul>

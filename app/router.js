@@ -6,7 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('list', {path: '/'}, function() {
+  this.route('documents', {path: '/'}, function() {
     this.route('versions', {path: 'versions/:id'});
   });
 });
