@@ -1,16 +1,5 @@
 <ul>
     {{#each model as |document|}}
-    <li>
-        {{document.name}}
-        <ul>
-            {{#each document.versions as |version|}}
-            <li>
-                {{#link-to 'documents.versions' version.id}}
-                    {{moment-format version.timestamp}}
-                {{/link-to}}
-            </li>
-            {{/each}}
-        </ul>
-    </li>
+        {{document-history document=document collapseVersions=true}}
     {{/each}}
 </ul>

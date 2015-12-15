@@ -1,0 +1,15 @@
+<li>
+    <button {{action 'toggleCollapseVersions'}} class="btn btn-link">+</button>
+    <span>{{document.name}}</span>
+    {{#bs-collapse collapsed=collapseVersions}}
+    <ul>
+        {{#each document.versions as |version|}}
+        <li>
+            {{#link-to 'documents.versions' version.id}}
+                {{moment-format version.timestamp}}
+            {{/link-to}}
+        </li>
+        {{/each}}
+    </ul>
+    {{/bs-collapse}}
+</li>
