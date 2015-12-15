@@ -1,5 +1,11 @@
 <li>
-    <button {{action 'toggleCollapseVersions'}} class="btn btn-link">+</button>
+    <a {{action 'toggleCollapseVersions'}} href="#">
+        {{#if collapseVersions}}
+            {{fa-icon 'caret-right'}} 
+        {{else}}
+            {{fa-icon 'caret-down'}}
+        {{/if}}
+    </a>
     <span>{{document.name}}</span>
     {{#bs-collapse collapsed=collapseVersions}}
     <ul>
