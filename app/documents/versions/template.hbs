@@ -1,14 +1,13 @@
-<table class="table">
-    <caption>{{model.document.name}} - {{moment-format model.timestamp}}</caption>
+<table class="table table-hover">
     <thead>
         <tr>
             <th>Key</th>
-            <th>Value</th>
+            <th>{{model.document.name}} - {{moment-format model.timestamp}}</th>
         </tr>
     </thead>
     <tbody>
-        {{#each model.attributes as |attribute|}}
-        <tr>
+        {{#each visibleAttributes as |attribute|}}
+        <tr {{action 'selectAttribute' attribute.key}}>
             <td>{{attribute.key}}</td>
             <td>{{attribute.value}}</td>
         </tr>
