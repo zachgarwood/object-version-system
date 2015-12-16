@@ -8,12 +8,10 @@
     </a>
     <span>{{document.name}}</span>
     {{#bs-collapse collapsed=collapseVersions}}
-    <ul>
+    <ul class="list-unstyled">
         {{#each document.versions as |version|}}
         <li>
-            {{#link-to 'documents.versions' version.id}}
-                {{moment-format version.timestamp}}
-            {{/link-to}}
+            {{moment-format version.timestamp}}
         </li>
         {{/each}}
     </ul>

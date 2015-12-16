@@ -1,7 +1,7 @@
 export default function() {
   this.get('/documents');
+  this.get('/versions');
   this.get('/versions/:id');
-  this.get('/contents/:id');
   /*
     Config (with defaults).
 

@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('documents', {path: '/'}, function() {
-    this.route('versions', {path: 'versions/:id'});
+    this.route('comparison');
   });
 });
 

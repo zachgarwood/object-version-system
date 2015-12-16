@@ -1,14 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(params) {
-    return this.store.find('version', params.id);
+  model() {
+    return this.store.findAll('version');
   },
   renderTemplate() {
-    this.render('documents.versions',
+    this.render('documents.comparison',
     {
       into: 'application',
-      outlet: 'versions',
+      outlet: 'comparison',
     });
   }
 });
