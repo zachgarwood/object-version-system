@@ -1,9 +1,9 @@
 <table class="table table-hover">
-    {{#if selectedAttribute}}
+    {{#if selectedProperty}}
         <caption>
-            <span>{{selectedAttribute}}</span>
+            <span>{{selectedProperty}}</span>
             <button
-                {{action 'selectAttribute' null}}
+                {{action 'selectProperty' null}}
                 class="btn btn-danger btn-xs"
             >
                 Clear
@@ -12,7 +12,7 @@
     {{/if}}
     <thead>
         <tr>
-            {{#unless selectedAttribute}}<th>Key</th>{{/unless}}
+            {{#unless selectedProperty}}<th>Key</th>{{/unless}}
             {{#each selectedVersions as |version|}}
             <th>{{version.document.name}} - {{moment-format version.timestamp}}</th>
             {{/each}}
@@ -20,8 +20,10 @@
     </thead>
     <tbody>
         {{#each comparisons as |comparison|}}
-        <tr>
-            <td>{{comparison.key}}</td>
+        <tr {{action 'selectProperty' comparison.key}}>
+            {{#unless selectedProperty}}
+                <td class="text-primary">{{comparison.key}}</td>
+            {{/unless}}
             {{#each comparison.diffs as |diff|}}
                 {{#if diff.isChanged}}
                     <td class="warning">{{diff.value}}</td>
