@@ -5,12 +5,4 @@ export default DS.Model.extend({
   document: DS.belongsTo('document'),
   timestamp: DS.attr('date'),
   properties: DS.attr(),
-  attributes: Ember.computed('properties', function() {
-    let properties = this.get('properties');
-    let attributes = Ember.A();
-    for (var key in properties) {
-        attributes.addObject({key: key, value: properties[key]});
-    }
-    return attributes;
-  })
 });
