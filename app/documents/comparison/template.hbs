@@ -14,7 +14,10 @@
         <tr>
             {{#unless selectedProperty}}<th>Key</th>{{/unless}}
             {{#each selectedVersions as |version|}}
-            <th>{{version.document.name}} - {{moment-format version.timestamp}}</th>
+            <th>
+                <div>{{version.document.name}}</div>
+                <div>{{moment-format version.timestamp}}</div>
+            </th>
             {{/each}}
         </tr>
     </thead>

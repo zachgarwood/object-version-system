@@ -7,7 +7,7 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'auto',
     moment: {
-      outputFormat: 'LLL'
+      outputFormat: 'LL'
     },
     EmberENV: {
       FEATURES: {

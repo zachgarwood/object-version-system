@@ -5,12 +5,16 @@
         {{else}}
             {{fa-icon 'caret-down'}}
         {{/if}}
+        <span>{{document.name}}</span>
     </a>
-    <span>{{document.name}}</span>
     {{#bs-collapse collapsed=collapseVersions}}
     <ul class="list-unstyled">
         {{#each document.versions as |version|}}
         <li>
+            <input
+                type="checkbox"
+                onclick={{action 'toggleVersionActive' version.id}}
+            />
             {{moment-format version.timestamp}}
         </li>
         {{/each}}

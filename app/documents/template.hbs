@@ -1,5 +1,9 @@
 <ul class="list-unstyled">
     {{#each model as |document|}}
-        {{document-history document=document collapseVersions=true}}
+        {{document-history
+            document=document
+            collapseVersions=true
+            updateComparison=(action 'updateComparison')
+        }}
     {{/each}}
 </ul>

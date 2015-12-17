@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
     }
   },
   selectedProperty: null,
-  selectedVersions: Ember.computed('model', 'versions', function() {
+  selectedVersions: Ember.computed('model', 'version_ids', function() {
     let versionIds = [];
     if (this.get('version_ids') !== undefined) {
       versionIds = this.get('version_ids').split(',');
