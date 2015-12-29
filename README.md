@@ -1,53 +1,26 @@
-# Object-version-system
+Object Version System
+=====================
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+# Installation
+0. Prerequisites
+    > You must have [Node.js](https://nodejs.org/en/) (with NPM) and [MongoDB](https://www.mongodb.org/) already installed.
+1. Unzip
+    > `unzip object-version-system.zip`
+2. Navigate to directory
+    > `cd object-version-system`
+3. Install
+    > `npm install`
 
-## Prerequisites
+# Usage
+1. Start application
+    > `node object-version-system.js`
+2. POST JSON objects to `http://localhost:3000/documents/`
+3. Open a browser and navigate to [http://localhost:3000](http://localhost:3000)
+4. Click a document name to view it's version history by date
+5. Check multiple versions to compare properties
+6. Click a property to narrow the comparison to just that property
 
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+# Security
+This application was built with the understanding that it will reside on a
+trusted intranet; therefore, it does not authenticate requests. **It is not
+secure to expose this application's endpoints to the internet at large.**

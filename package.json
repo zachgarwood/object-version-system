@@ -1,22 +1,18 @@
 {
   "name": "object-version-system",
   "version": "0.0.0",
-  "description": "Small description for object-version-system goes here",
+  "description": "A UI for viewing the differences between versions of JSON objects",
   "private": true,
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
   "scripts": {
-    "build": "ember build",
-    "start": "ember server",
-    "test": "ember test"
+    "postinstall": "bower install && ember build -prod"
   },
-  "repository": "",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": {
+    "name": "Zach Garwood",
+    "email": "zachgarwood@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
@@ -44,6 +40,8 @@
   },
   "dependencies": {
     "body-parser": "^1.14.2",
+    "bower": "^1.7.1",
+    "ember-cli": "1.13.13",
     "express": "^4.13.3",
     "mongoose": "^4.3.2"
   }
