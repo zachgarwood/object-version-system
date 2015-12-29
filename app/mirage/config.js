@@ -1,7 +1,9 @@
 export default function() {
+  this.urlPrefix = 'http://localhost:3000';
   this.get('/documents');
   this.get('/versions');
   this.get('/versions/:id');
+  this.passthrough('http://localhost:4200/**');
   /*
     Config (with defaults).
 
