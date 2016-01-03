@@ -1,11 +1,19 @@
 <div class="container">
-    <div class="row">
-        <div class="col-lg-3">
-            <h2>Documents</h2>
-            {{outlet 'documents'}}
+    <div class="col-lg-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">Objects</h2>
+            </div>
+            <div class="panel-body">
+                {{outlet 'documents'}}
+            </div>
         </div>
-        <div class="col-lg-9">
-            <h2>Comparison</h2>
+    </div>
+    <div class="col-lg-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">Data</h2>
+            </div>
             {{outlet 'comparison'}}
         </div>
     </div>
