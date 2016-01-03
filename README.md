@@ -3,7 +3,9 @@ Object Version System
 
 # Installation
 0. Prerequisites
-    > You must have [Node.js](https://nodejs.org/en/) (with NPM) and [MongoDB](https://www.mongodb.org/) already installed.
+    > You must have [Git](https://git-scm.com/),
+    [Node.js](https://nodejs.org/en/) (with NPM), and
+    [MongoDB](https://www.mongodb.org/) already installed.
 1. Unzip
     > `unzip object-version-system.zip`
 2. Navigate to directory
